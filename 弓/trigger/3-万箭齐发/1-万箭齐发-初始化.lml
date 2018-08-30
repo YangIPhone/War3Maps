@@ -1,0 +1,24 @@
+事件
+    TriggerRegisterAnyUnitEventBJ
+        预设: PlayerUnitEventSpellEffect
+条件
+    OperatorCompareAbilityId
+        函数: GetSpellAbilityId
+        预设: OperatorEqualENE
+        常量: A000
+动作
+    SetVariable
+        变量: player
+        函数: GetTriggerUnit
+    SetVariable
+        变量: spot
+        函数: GetSpellTargetLoc
+    SetVariable
+        变量: sum
+        函数: OperatorIntegerMultiply
+            常量: 50
+            函数: GetUnitAbilityLevel
+                函数: GetTriggerUnit
+                常量: A000
+    TriggerExecute
+        变量: gg_trg_____________u

@@ -1,0 +1,3 @@
+player: unit
+sum: integer
+spot: location

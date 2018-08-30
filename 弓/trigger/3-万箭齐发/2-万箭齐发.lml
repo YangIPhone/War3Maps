@@ -1,0 +1,371 @@
+事件
+条件
+动作
+    YDWESetAnyTypeLocalVariable
+        预设: typename05_timer
+        常量: timer
+        函数: CreateTimer
+    YDWETimerStartMultiple
+        函数: YDWEGetAnyTypeLocalVariable
+            常量: timer
+        常量: 0.02
+        预设: PeriodicOptionPeriodic
+        动作
+        动作
+            SetVariable
+                变量: sum
+                函数: OperatorIntegerSubtract
+                    变量: sum
+                    常量: 1
+            IfThenElseMultiple
+                条件
+                    OperatorCompareInteger
+                        变量: sum
+                        预设: OperatorGreaterEq
+                        常量: 0
+                动作
+                    YDWESetAnyTypeLocalVariable
+                        预设: typename14_location
+                        常量: d
+                        函数: PolarProjectionBJ
+                            函数: GetUnitLoc
+                                变量: player
+                            函数: GetRandomReal
+                                常量: 50.00
+                                常量: 100.00
+                            函数: GetRandomDirectionDeg
+                    YDWESetAnyTypeLocalVariable
+                        预设: typename38_degree
+                        常量: jd
+                        函数: YDWEAngleBetweenUnitAndPoint
+                            变量: player
+                            变量: spot
+                    YDWESetAnyTypeLocalVariable
+                        预设: typename07_unit
+                        常量: 光圈
+                        函数: CreateUnitAtLoc
+                            函数: GetOwningPlayer
+                                变量: player
+                            常量: e001
+                            函数: YDWEGetAnyTypeLocalVariable
+                                常量: d
+                            函数: YDWEGetAnyTypeLocalVariable
+                                常量: jd
+                    YDWETimerRemoveUnit
+                        常量: 0.20
+                        函数: YDWEGetAnyTypeLocalVariable
+                            常量: 光圈
+                    YDWESetAnyTypeLocalVariable
+                        预设: typename01_integer
+                        常量: jslx
+                        函数: GetRandomInt
+                            常量: 1
+                            常量: 4
+                    IfThenElseMultiple
+                        条件
+                            OperatorCompareInteger
+                                函数: YDWEGetAnyTypeLocalVariable
+                                    常量: jslx
+                                预设: OperatorEqual
+                                常量: 1
+                        动作
+                            YDWESetAnyTypeLocalVariable
+                                预设: typename07_unit
+                                常量: js
+                                函数: CreateUnitAtLoc
+                                    函数: GetOwningPlayer
+                                        变量: player
+                                    常量: e002
+                                    函数: YDWEGetAnyTypeLocalVariable
+                                        常量: d
+                                    函数: YDWEGetAnyTypeLocalVariable
+                                        常量: jd
+                            SetUnitFlyHeightBJ
+                                函数: YDWEGetAnyTypeLocalVariable
+                                    常量: js
+                                函数: GetRandomReal
+                                    常量: 50.00
+                                    常量: 150.00
+                                常量: 0.00
+                            YDWESaveAnyTypeDataByUserData
+                                预设: typename07_unit
+                                函数: YDWEGetAnyTypeLocalVariable
+                                    常量: js
+                                常量: JS
+                                预设: typename05_timer
+                                函数: CreateTimer
+                            YDWESaveAnyTypeDataByUserData
+                                预设: typename07_unit
+                                函数: YDWEGetAnyTypeLocalVariable
+                                    常量: js
+                                常量: zs
+                                预设: typename01_integer
+                                常量: 1
+                        动作
+                            IfThenElseMultiple
+                                条件
+                                    OperatorCompareInteger
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: jslx
+                                        预设: OperatorEqual
+                                        常量: 2
+                                动作
+                                    YDWESetAnyTypeLocalVariable
+                                        预设: typename07_unit
+                                        常量: js
+                                        函数: CreateUnitAtLoc
+                                            函数: GetOwningPlayer
+                                                变量: player
+                                            常量: e003
+                                            函数: YDWEGetAnyTypeLocalVariable
+                                                常量: d
+                                            函数: YDWEGetAnyTypeLocalVariable
+                                                常量: jd
+                                    SetUnitFlyHeightBJ
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: js
+                                        函数: GetRandomReal
+                                            常量: 50.00
+                                            常量: 150.00
+                                        常量: 0.00
+                                    YDWESaveAnyTypeDataByUserData
+                                        预设: typename07_unit
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: js
+                                        常量: JS
+                                        预设: typename05_timer
+                                        函数: CreateTimer
+                                    YDWESaveAnyTypeDataByUserData
+                                        预设: typename07_unit
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: js
+                                        常量: zs
+                                        预设: typename01_integer
+                                        常量: 1
+                                动作
+                                    IfThenElseMultiple
+                                        条件
+                                            OperatorCompareInteger
+                                                函数: YDWEGetAnyTypeLocalVariable
+                                                    常量: jslx
+                                                预设: OperatorEqual
+                                                常量: 3
+                                        动作
+                                            YDWESetAnyTypeLocalVariable
+                                                预设: typename07_unit
+                                                常量: js
+                                                函数: CreateUnitAtLoc
+                                                    函数: GetOwningPlayer
+                                                        变量: player
+                                                    常量: e004
+                                                    函数: YDWEGetAnyTypeLocalVariable
+                                                        常量: d
+                                                    函数: YDWEGetAnyTypeLocalVariable
+                                                        常量: jd
+                                            SetUnitFlyHeightBJ
+                                                函数: YDWEGetAnyTypeLocalVariable
+                                                    常量: js
+                                                函数: GetRandomReal
+                                                    常量: 50.00
+                                                    常量: 150.00
+                                                常量: 0.00
+                                            YDWESaveAnyTypeDataByUserData
+                                                预设: typename07_unit
+                                                函数: YDWEGetAnyTypeLocalVariable
+                                                    常量: js
+                                                常量: JS
+                                                预设: typename05_timer
+                                                函数: CreateTimer
+                                            YDWESaveAnyTypeDataByUserData
+                                                预设: typename07_unit
+                                                函数: YDWEGetAnyTypeLocalVariable
+                                                    常量: js
+                                                常量: zs
+                                                预设: typename01_integer
+                                                常量: 1
+                                        动作
+                                            IfThenElseMultiple
+                                                条件
+                                                    OperatorCompareInteger
+                                                        函数: YDWEGetAnyTypeLocalVariable
+                                                            常量: jslx
+                                                        预设: OperatorEqual
+                                                        常量: 4
+                                                动作
+                                                    YDWESetAnyTypeLocalVariable
+                                                        预设: typename07_unit
+                                                        常量: js
+                                                        函数: CreateUnitAtLoc
+                                                            函数: GetOwningPlayer
+                                                                变量: player
+                                                            常量: e000
+                                                            函数: YDWEGetAnyTypeLocalVariable
+                                                                常量: d
+                                                            函数: YDWEGetAnyTypeLocalVariable
+                                                                常量: jd
+                                                    SetUnitFlyHeightBJ
+                                                        函数: YDWEGetAnyTypeLocalVariable
+                                                            常量: js
+                                                        函数: GetRandomReal
+                                                            常量: 50.00
+                                                            常量: 150.00
+                                                        常量: 0.00
+                                                    YDWESaveAnyTypeDataByUserData
+                                                        预设: typename07_unit
+                                                        函数: YDWEGetAnyTypeLocalVariable
+                                                            常量: js
+                                                        常量: JS
+                                                        预设: typename05_timer
+                                                        函数: CreateTimer
+                                                    YDWESaveAnyTypeDataByUserData
+                                                        预设: typename07_unit
+                                                        函数: YDWEGetAnyTypeLocalVariable
+                                                            常量: js
+                                                        常量: zs
+                                                        预设: typename01_integer
+                                                        常量: 1
+                    YDWESaveAnyTypeDataByUserData
+                        预设: typename07_unit
+                        函数: YDWEGetAnyTypeLocalVariable
+                            常量: js
+                        常量: zu
+                        预设: typename12_group
+                        函数: CreateGroup
+                    YDWESetAnyTypeLocalArray
+                        预设: typename01_integer
+                        常量: i_gongw
+                        函数: YDWELoadAnyTypeDataByUserData
+                            预设: typename07_unit
+                            函数: YDWEGetAnyTypeLocalVariable
+                                常量: js
+                            常量: zs
+                        常量: 0
+                    YDWETimerStartMultiple
+                        函数: YDWELoadAnyTypeDataByUserData
+                            预设: typename07_unit
+                            函数: YDWEGetAnyTypeLocalVariable
+                                常量: js
+                            常量: JS
+                        函数: GetRandomReal
+                            常量: 0.02
+                            常量: 0.09
+                        预设: PeriodicOptionPeriodic
+                        动作
+                        动作
+                            YDWESetAnyTypeLocalArray
+                                预设: typename01_integer
+                                常量: i_gongw
+                                函数: YDWELoadAnyTypeDataByUserData
+                                    预设: typename07_unit
+                                    函数: YDWEGetAnyTypeLocalVariable
+                                        常量: js
+                                    常量: zs
+                                函数: OperatorIntegerAdd
+                                    函数: YDWEGetAnyTypeLocalArray
+                                        常量: i_gongw
+                                        函数: YDWELoadAnyTypeDataByUserData
+                                            预设: typename07_unit
+                                            函数: YDWEGetAnyTypeLocalVariable
+                                                常量: js
+                                            常量: zs
+                                    常量: 1
+                            IfThenElseMultiple
+                                条件
+                                    OperatorCompareInteger
+                                        函数: YDWEGetAnyTypeLocalArray
+                                            常量: i_gongw
+                                            函数: YDWELoadAnyTypeDataByUserData
+                                                预设: typename07_unit
+                                                函数: YDWEGetAnyTypeLocalVariable
+                                                    常量: js
+                                                常量: zs
+                                        预设: OperatorLessEq
+                                        常量: 30
+                                动作
+                                    YDWESetAnyTypeLocalVariable
+                                        预设: typename14_location
+                                        常量: dd
+                                        函数: GetUnitLoc
+                                            函数: YDWEGetAnyTypeLocalVariable
+                                                常量: js
+                                    YDWESetAnyTypeLocalVariable
+                                        预设: typename14_location
+                                        常量: ddd
+                                        函数: PolarProjectionBJ
+                                            函数: YDWEGetAnyTypeLocalVariable
+                                                常量: dd
+                                            常量: 50.00
+                                            函数: GetUnitFacing
+                                                函数: YDWEGetAnyTypeLocalVariable
+                                                    常量: js
+                                    SetUnitPositionLocFacingBJ
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: js
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: ddd
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: jd
+                                    ForGroupMultiple
+                                        函数: GetUnitsInRangeOfLocMatching
+                                            常量: 100.00
+                                            函数: GetUnitLoc
+                                                函数: YDWEGetAnyTypeLocalVariable
+                                                    常量: js
+                                            条件: GetBooleanAnd
+                                                条件: OperatorCompareBoolean
+                                                    函数: IsUnitType
+                                                        函数: GetFilterUnit
+                                                        预设: UnitTypeStructure
+                                                    预设: OperatorEqualENE
+                                                    常量: false
+                                                条件: OperatorCompareBoolean
+                                                    函数: IsUnitEnemy
+                                                        函数: GetFilterUnit
+                                                        函数: GetOwningPlayer
+                                                            变量: player
+                                                    预设: OperatorEqualENE
+                                                    常量: true
+                                        动作
+                                            UnitDamageTargetBJ
+                                                变量: player
+                                                函数: GetEnumUnit
+                                                函数: I2R
+                                                    函数: OperatorIntegerMultiply
+                                                        函数: GetHeroAgi
+                                                            变量: player
+                                                            预设: InclusionInclude
+                                                        函数: OperatorIntegerAdd
+                                                            常量: 1
+                                                            函数: GetUnitAbilityLevel
+                                                                变量: player
+                                                                常量: A000
+                                                预设: AttackTypeHero
+                                                预设: DamageTypeNormal
+                                    RemoveLocation
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: dd
+                                    RemoveLocation
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: ddd
+                                动作
+                                    RemoveUnit
+                                        函数: YDWEGetAnyTypeLocalVariable
+                                            常量: js
+                                    YDWETimerStartFlush
+                    GroupClear
+                        函数: YDWELoadAnyTypeDataByUserData
+                            预设: typename07_unit
+                            函数: YDWEGetAnyTypeLocalVariable
+                                常量: js
+                            常量: zu
+                    DestroyGroup
+                        函数: YDWELoadAnyTypeDataByUserData
+                            预设: typename07_unit
+                            函数: YDWEGetAnyTypeLocalVariable
+                                常量: js
+                            常量: zu
+                    RemoveLocation
+                        函数: YDWEGetAnyTypeLocalVariable
+                            常量: d
+                动作
+                    YDWETimerStartFlush
